@@ -15,12 +15,12 @@ import           XMonad.Util.Run                  (spawnPipe, unsafeSpawn)
 
 myStartupHook :: X ()
 myStartupHook = do
-  unsafeSpawn "feh --bg-scale ~/Pictures/wallpaper.png &"
+  unsafeSpawn "feh --bg-scale ~/dotfiles/wallpaper.png &"
   unsafeSpawn myTerminal -- I have to manualy remove this terminal because Dropbox starts there and won't stop printing msgs
   runOrRaise "emacs" (className =? "Emacs")
-  runOrRaise "spotify" (className =? "Spotify")
+  -- runOrRaise "spotify" (className =? "Spotify")
   runOrRaise "nautilus" (className =? "Nautilus")
-  runOrRaise "firefox" (className =? "Firefox")
+  runOrRaise "google-chrome-stable" (className =? "GoogleChrome")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 myModMask            = mod4Mask                        -- Sets modkey to super/windows key
@@ -32,9 +32,9 @@ myTerminal           = "gnome-terminal"
 myTextEditor         = "emacs"                         -- Sets default text editor
 myBorderWidth        = 2                               -- Sets border width for windows
 myNormalBorderColor  = "#4a4a4a"
-myFocusedBorderColor = "#7fff00"
+myFocusedBorderColor = "#3265db"
 
-mySpacing = spacingRaw True (Border 0 10 10 10) True (Border 10 10 10 10) True
+mySpacing = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True
 
 main = do
     xmproc <- spawnPipe "xmobar"

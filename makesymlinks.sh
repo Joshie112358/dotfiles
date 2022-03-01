@@ -6,8 +6,8 @@
 
 ########## Variables
 
-dir=~/src/dotfiles                    # dotfiles directory
-olddir=~/src/dotfiles/dotfiles_old    # old dotfiles backup directory
+dir=~/dotfiles                    # dotfiles directory
+olddir=~/dotfiles/dotfiles_old    # old dotfiles backup directory
 
 files="~/Pictures/Screenshots/wallpaper.png ~/.doom.d/config.el ~/.doom.d/custom.el ~/.doom.d/init.el ~/.doom.d/packages ~/.zshrc ~/.xmobarrc ~/.xmonad/xmonad.hs ~/.xsession ~/.Xresources ~/.ghc/ghci.conf"    # list of files/folders to symlink in homedir
 
@@ -63,8 +63,8 @@ ln -s $dir/packages.el ~/.doom.d/packages.el
 ln -s $dir/wallpaper.png ~/Pictures/wallpaper.png
 
 # doom-emacs install
-echo "Installing Doom Emacs."
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+# echo "Installing Doom Emacs."
+# git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+# ~/.emacs.d/bin/doom install
 
 echo "done"
