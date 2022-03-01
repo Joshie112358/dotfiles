@@ -1,3 +1,3 @@
 # dotfiles
 
-TODO: this
+El chido es la rama thinkpad
